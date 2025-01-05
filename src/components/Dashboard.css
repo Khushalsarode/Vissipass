@@ -1,0 +1,330 @@
+/* General Dashboard Styling */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: var(--dashboard-bg-color); /* Dynamic background color based on theme */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    font-size: 1.2em;
+    color: var(--text-color-muted); /* Muted text color */
+    font-weight: 500;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Profile Overview Section Padding */
+.dashboard-section .profile-overview {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* Dashboard Section Styling */
+.dashboard-section {
+    background: var(--section-bg-color); /* Dynamic section background color */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for sections */
+.dashboard-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+.dashboard-section h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    color: var(--text-color-heading); /* Dynamic heading color */
+    font-weight: 600;
+}
+
+/* Section Paragraph Text */
+.dashboard-section p {
+    color: var(--text-color); /* Dynamic text color */
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Light Theme */
+body.light {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* Light Theme */
+:root {
+    --dashboard-bg-color: #f8f9fa; /* Light theme background */
+    --section-bg-color: white; /* Light theme section background */
+    --text-color: #495057; /* Light theme text color */
+    --text-color-heading: #343a40; /* Darker text color for headings */
+    --text-color-muted: #6c757d; /* Muted text color */
+    --link-color: #007bff; /* Light blue links */
+    --border-color: #e0e0e0; /* Subtle border color */
+    --card-bg-color: #ffffff; /* White cards */
+    --card-shadow: rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    --heading-font-size: 24px; /* Heading font size */
+    --subheading-font-size: 18px; /* Subheading font size */
+    --paragraph-font-size: 14px; /* Paragraph font size */
+}
+
+/* Dark Theme Overrides */
+body.dark {
+    --dashboard-bg-color: #212529; /* Dark theme background */
+    --section-bg-color: #343a40; /* Dark theme section background */
+    --text-color: #f8f9fa; /* Dark theme text color */
+    --text-color-heading: #ffffff; /* Dark theme heading color */
+    --text-color-muted: #adb5bd; /* Dark theme muted text color */
+    --link-color: #4fa3f7; /* Soft blue for links in dark mode */
+    --border-color: #444; /* Darker border color */
+    --card-bg-color: #1e1e1e; /* Dark theme cards */
+    --card-shadow: rgba(255, 255, 255, 0.1); /* Subtle light shadow for dark mode cards */
+}
+/* Settings Buttons */
+.dashboard .settings-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.toggle-theme,
+.clear-cache,
+.delete-data,
+.change-password,
+.change-passowrd-submit,
+.delete-account {
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Button colors */
+.toggle-theme {
+    background-color: #007bff;
+    color: white;
+}
+
+.toggle-theme:hover {
+    background-color: #0056b3;
+}
+
+.clear-cache {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.clear-cache:hover {
+    background-color: #e0a800;
+}
+.change-password {
+    background-color: #28a745;
+    color: white;
+}
+.change-password:hover {
+    background-color: #218838;
+}
+.change-passowrd-submit{
+    background-color: #28a745;
+    color: white;
+}
+.change-passowrd-submit:hover {
+    background-color: #218838;
+}
+.delete-data {
+    background-color: #fd7e14;
+    color: white;
+}
+
+.delete-data:hover {
+    background-color: #e76f00;
+}
+
+.delete-account {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-account:hover {
+    background-color: #c82333;
+}
+
+.dashboard .settings-options button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    flex-direction: column;
+}
+
+/* Loading Spinner */
+.loading-screen .spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+/* Loading Message */
+.loading-screen .message {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* General Styles for Analytics Content */
+.analytics-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive Grid */
+    gap: 20px;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .analytics-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .analytics-card h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+  
+  .analytics-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .analytics-card ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  .admin-users {
+    background-color: var(--admin-card-bg);
+  }
+  
+  .admin-users ul li {
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  /* Light Mode Styles */
+  .light-mode {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --card-bg-color: #fff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --heading-color: #1e2a3a;
+    --admin-card-bg: #eaf2f7;
+  }
+  
+  /* Dark Mode Styles */
+  .dark-mode {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --card-bg-color: #333;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --heading-color: #fff;
+    --admin-card-bg: #1c1c1c;
+  }
+  
+  /* Optional: Adding styles for the theme toggle button */
+  .theme-toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--card-bg-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .theme-toggle-button:hover {
+    background-color: var(--card-shadow);
+    color: var(--text-color);
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .analytics-content {
+      grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+  }
+  
+
+  

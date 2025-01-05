@@ -1,0 +1,169 @@
+:root {
+    --primary-color: #262626; /* Dark black for text and key elements */
+    --secondary-color: #b0bec5; /* Subtle gray for hover or accents */
+    --background-color: #fff; /* Clean white background */
+    --hover-color: #5147470c; /* Light cream for hover effects */
+    --text-color: #333; /* Text color */
+    --border-color: #e0e0e0; /* Subtle light border color */
+}
+
+.navbar {
+    background-color: var(--background-color);
+    padding: 1rem 2rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-bottom: 1px solid var(--border-color); /* Minimal bottom border */
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.info {
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.logo {
+    width: 40px; /* Slightly smaller logo */
+    height: 40px;
+    padding-right: 20px;
+}
+
+.project-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-menu li {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.nav-menu li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: var(--secondary-color);
+    background-color: var(--hover-color);
+    padding: 0.2rem 0.5rem; /* Slight padding on hover */
+    border-radius: 4px; /* Subtle rounded corners */
+}
+
+.profile-section {
+    position: relative;
+}
+
+.profile-icon {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-icon:hover {
+    color: var(--secondary-color);
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 250%;
+    right: 0;
+    width: 250px; /* Smaller dropdown */
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 8px;
+    border: 1px solid var(--border-color); /* Light border */
+    z-index: 10;
+}
+
+.user-avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.logout-button {
+    background-color: #f44336; /* Red background for logout */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+
+/* Positioning the theme toggle button */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--light-text);
+    transition: transform 0.3s ease, color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+/* Hover and focus styles for better UX */
+.theme-toggle:focus {
+    outline: none;
+}
+
+/* CSS Variables for Light/Dark Mode */
+body.light .theme-toggle {
+    color: var(--light-text);
+}
+
+body.dark .theme-toggle {
+    color: var(--dark-text);
+}

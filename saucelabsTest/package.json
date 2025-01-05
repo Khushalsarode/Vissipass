@@ -1,0 +1,22 @@
+{
+  "name": "saucelabstest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "webdriverio": "^9.5.1"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.5.1",
+    "@wdio/sauce-service": "^9.5.1",
+    "chai": "^5.1.2",
+    "mocha": "^11.0.1"
+  }
+}

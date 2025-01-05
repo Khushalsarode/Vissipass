@@ -1,0 +1,167 @@
+/* Base Styles for Light and Dark Themes */
+:root {
+    --light-background: #faf9f6; /* Cream White */
+    --dark-background: #1f1f1f; /* Dark Black */
+    --light-form-background: #ffffff; /* Pure White */
+    --dark-form-background: #333333; /* Dark Grey */
+    --light-text: #2c2c2c; /* Dark Grey Text */
+    --dark-text: #ffffff; /* White Text */
+    --light-border: #e0e0e0; /* Light Grey Border */
+    --dark-border: #444444; /* Darker Grey Border */
+    --primary-color: #5c5f5f; /* Muted Greenish-Gray */
+    --hover-color: #f0f0f0; /* Light Gray Hover */
+    --footer-text-light: #999999; /* Light Grey Footer */
+    --footer-text-dark: #bbbbbb; /* Light Grey Footer in Dark Mode */
+    --table-header-bg: #3d3d3d; /* Dark Table Header */
+    --table-header-text: #ffffff; /* Table Header Text */
+    --border-radius: 8px; /* Smooth corners for cards and tables */
+}
+
+/* Global Styles for Light and Dark Themes */
+body.light {
+    background-color: var(--light-background);
+    color: var(--light-text);
+}
+
+body.dark {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+/* Main container */
+.achieve {
+    display: absolute;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--light-form-background);
+    min-height: 100vh;
+}
+
+body.dark .achieve {
+    background-color: var(--dark-form-background);
+}
+
+/* Title */
+.achieve h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--light-text);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+body.dark .achieve h2 {
+    color: var(--dark-text);
+}
+
+/* No records message */
+.achieve p {
+    font-size: 1em;
+    color: var(--light-text);
+    margin-top: 20px;
+}
+
+body.dark .achieve p {
+    color: var(--dark-text);
+}
+
+/* Table styling */
+.archived-records-table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background: var(--light-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+body.dark .archived-records-table {
+    background: var(--dark-form-background);
+    border: 1px solid var(--dark-border);
+}
+
+/* Table header */
+.archived-records-table thead {
+    background-color: var(--table-header-bg);
+    color: var(--table-header-text);
+}
+
+body.dark .archived-records-table thead {
+    background-color: var(--table-header-bg);
+}
+
+.archived-records-table th {
+    padding: 15px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Table rows */
+.archived-records-table tbody tr {
+    border-bottom: 1px solid var(--light-border);
+    transition: background-color 0.3s ease;
+}
+
+body.dark .archived-records-table tbody tr {
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.archived-records-table tbody tr:hover {
+    background-color: var(--hover-color);
+}
+
+body.dark .archived-records-table tbody tr:hover {
+    background-color: #444;
+}
+
+/* Table cells */
+.archived-records-table td {
+    padding: 14px;
+    font-size: 0.95em;
+    color: var(--light-text);
+    vertical-align: middle;
+}
+
+body.dark .archived-records-table td {
+    color: var(--dark-text);
+}
+
+/* Profile image styling */
+.archived-records-table td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--light-border);
+}
+
+body.dark .archived-records-table td img {
+    border: 2px solid var(--dark-border);
+}
+
+/* Footer styling */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--footer-text-light);
+    padding: 15px;
+    background-color: var(--light-background);
+}
+
+body.dark .footer {
+    color: var(--footer-text-dark);
+    background-color: var(--dark-form-background);
+}
+
+.footer p {
+    margin: 0;
+}
